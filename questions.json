@@ -1,0 +1,47 @@
+{
+  "tests": [
+    {
+      "id": "NounTest1",
+      "title": "Noun Test",
+      "durationMinutes": 30,
+      "negative": 0.25,
+      "questions": [
+        {
+          "section": "-ory suffix",
+          "text": "Which of the following is a noun ending with '-ory' that means a place for books?",
+          "options": ["Library", "Glory", "Victory", "History"],
+          "answer": 0,
+          "explain": "'Library' is a noun ending with '-ory' that refers to a place where books are kept."
+        },
+        {
+          "section": "-ory suffix",
+          "text": "Which word ending with '-ory' refers to success in battle?",
+          "options": ["Victory", "History", "Factory", "Memory"],
+          "answer": 0,
+          "explain": "'Victory' is a noun with '-ory' meaning success in battle or competition."
+        },
+        {
+          "section": "-ion suffix",
+          "text": "Which word ending with '-ion' refers to the act of creating something?",
+          "options": ["Creation", "Nation", "Station", "Election"],
+          "answer": 0,
+          "explain": "'Creation' is a noun ending with '-ion' that refers to the act of making or producing something."
+        },
+        {
+          "section": "-ion suffix",
+          "text": "Which '-ion' noun means the process of choosing leaders by voting?",
+          "options": ["Election", "Motion", "Station", "Caution"],
+          "answer": 0,
+          "explain": "'Election' is a noun ending with '-ion' that means the process of choosing representatives or leaders."
+        },
+        {
+          "section": "-ion suffix",
+          "text": "Which '-ion' noun refers to the movement from one place to another?",
+          "options": ["Motion", "Creation", "Solution", "Nation"],
+          "answer": 0,
+          "explain": "'Motion' is a noun ending with '-ion' that refers to movement."
+        }
+      ]
+    }
+  ]
+}
