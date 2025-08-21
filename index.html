@@ -373,7 +373,23 @@ function submitTest(){
     `<p><b>Score:</b> ${score.toFixed(2)} / ${total}</p>
      <p><b>Correct:</b> ${correct}, <b>Wrong:</b> ${wrong}, <b>Unattempted:</b> ${unattempt}</p>
      <p><b>Time:</b> ${fmtHMS(Math.floor((Date.now()-state.startTs)/1000))}</p>`;
-  examArea.style.display='none';
+  examArea.style.display='none';examArea.style.display = 'none';
+
+// Save attempt
+recordAttempt({
+  when: new Date().toISOString(),
+  testId: (state.activeTest && state.activeTest.title) || 'Noun Test',
+  score: score,
+  total: total,
+  correct: correct,
+  wrong: wrong,
+  unattempted: unattempt,
+  timeSec: Math.floor((Date.now() - state.startTs) / 1000)
+});
+
+// Refresh the recent attempts list
+renderRecentAttempts((state.activeTest && state.activeTest.title) || 'Noun Test');
+
   resultArea.style.display='block';
 }
 $('#reviewBtn').onclick=()=>{
