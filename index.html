@@ -87,7 +87,22 @@ hr{border:none;border-top:1px solid var(--border);margin:12px 0}
       <button id="exportBtn">Export Result JSON</button>
     </div>
   </section>
-
+ <section class="card" id="recentAttemptsCard">
+  <h2>Recent Attempts</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Date & Time</th>
+        <th>Test</th>
+        <th>Score</th>
+        <th>%</th>
+        <th>Time</th>
+      </tr>
+    </thead>
+    <tbody id="attemptTableBody"></tbody>
+  </table>
+</section>
   <aside class="card">
     <h3>Test Info</h3>
     <div id="info"></div>
