@@ -40,7 +40,68 @@
           "options": ["Motion", "Creation", "Solution", "Nation"],
           "answer": 0,
           "explain": "'Motion' is a noun ending with '-ion' that refers to movement."
-        }
+        },
+  {
+    "section": "-ion suffix",
+    "text": "What is the meaning of “abbreviation”?",
+    "options": [
+      "A shortened form of a word or phrase",
+      "A type of plant",
+      "An unusual event",
+      "A musical instrument"
+    ],
+    "answer": 0,
+    "explain": "‘Abbreviation’ means a shortened form of a word or phrase."
+  },
+  {
+    "section": "-ion suffix",
+    "text": "What is the meaning of “aberration”?",
+    "options": [
+      "A departure from what is normal",
+      "A festival of lights",
+      "A small shelter",
+      "A mathematical sign"
+    ],
+    "answer": 0,
+    "explain": "‘Aberration’ means a departure from what is normal or expected."
+  },
+  {
+    "section": "-ion suffix",
+    "text": "What is the meaning of “ablution”?",
+    "options": [
+      "The act of washing oneself",
+      "A place for storing books",
+      "A style of writing",
+      "A type of tree"
+    ],
+    "answer": 0,
+    "explain": "‘Ablution’ means the act of washing oneself, often for ritual purposes."
+  },
+  {
+    "section": "-ion suffix",
+    "text": "What is the meaning of “abnegation”?",
+    "options": [
+      "Self-denial or rejection",
+      "The act of combining things",
+      "A joyful celebration",
+      "A type of fabric"
+    ],
+    "answer": 0,
+    "explain": "‘Abnegation’ means renouncing or rejecting something, especially for moral reasons."
+  },
+  {
+    "section": "-ion suffix",
+    "text": "What is the meaning of “abolition”?",
+    "options": [
+      "The act of formally ending a system or practice",
+      "The act of increasing numbers",
+      "A loud public meeting",
+      "A process of breathing"
+    ],
+    "answer": 0,
+    "explain": "‘Abolition’ means the formal ending of a system, custom, or practice."
+  }
+
       ]
     }
   ]
