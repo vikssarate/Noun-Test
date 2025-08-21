@@ -110,6 +110,46 @@ hr{border:none;border-top:1px solid var(--border);margin:12px 0}
 </main>
 
 <script>
+// ---- Attempt history (localStorage) ----
+const ATTEMPT_KEY_BASE = 'attempt_history_v1_';
+function attemptsKey(testId){ return ATTEMPT_KEY_BASE + (testId || 'default'); }
+
+function loadAttempts(testId) {
+  try { return JSON.parse(localStorage.getItem(attemptsKey(testId))) || []; }
+  catch { return []; }
+}
+function saveAttempts(testId, list) {
+  localStorage.setItem(attemptsKey(testId), JSON.stringify(list));
+}
+function recordAttempt(entry) {
+  const keyId = entry.testId || 'default';
+  const list = loadAttempts(keyId);
+  list.push(entry);
+  if (list.length > 100) list.shift();   // keep it light
+  saveAttempts(keyId, list);
+}
+function fmtTime(s){ if(s==null) return '-'; const m=Math.floor(s/60), ss=s%60; return `${String(m).padStart(2,'0')}:${String(ss).padStart(2,'0')}`; }
+function pct(score,total){ return total ? ((score/total)*100).toFixed(1) : '0.0'; }
+
+function renderRecentAttempts(testId){
+  const tbody = document.getElementById('attemptTableBody');
+  if(!tbody) return;
+  const all = loadAttempts(testId);
+  const lastSix = all.slice(-6).reverse(); // current + previous 5
+  if(!lastSix.length){ tbody.innerHTML = `<tr><td colspan="6">No attempts yet.</td></tr>`; return; }
+  tbody.innerHTML = lastSix.map((a,i)=>`
+    <tr>
+      <td>${i+1}</td>
+      <td>${new Date(a.when).toLocaleString()}</td>
+      <td>${a.testId || '-'}</td>
+      <td>${a.score} / ${a.total}</td>
+      <td>${pct(a.score,a.total)}%</td>
+      <td>${fmtTime(a.timeSec)}</td>
+    </tr>
+  `).join('');
+}
+// ----------------------------------------
+</script>
 /* ========= App state ========= */
 const state = {
   tests: [],
